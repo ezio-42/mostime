@@ -22,4 +22,4 @@ try:
 except FileNotFoundError:
     pass
 
-default_config = Config(**_default_config_data)
+default_config = Config(**_default_config_data)  # type: ignore

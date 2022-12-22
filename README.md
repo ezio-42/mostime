@@ -22,64 +22,26 @@ Web application that displays current time in Moscow.
 
 ## Development
 
-### Install pre-commit hooks (run this after dev tools installation)
+### Install pre-commit, linters, and formatters
 
-    pre-commit install
+    ```bash
+        poetry add -D black flake8 isort mypy pre-commit
 
-### black
+        pre-commit install
+    ```
 
-#### Install black (in case of separate usage)
+### Run linters and formatters
 
-    pip install black
+    ```bash
+        black .
 
-#### Check formatting
+        flake8 --verbose --max-line-length=80 --ignore="E203,W503"
 
-    black --check . --verbose --diff
+        isort .
 
-#### Automatically fix formatting (done in pre-commit)
+        mypy .
 
-    black .
+        pre-commit run -a markdownlint-fix
 
-### flake8
-
-#### Install flake8 (in case of separate usage)
-
-    pip install flake8
-
-#### Check formatting and errors (done in pre-commit)
-
-Ignore some rules due to conflict with black.
-
-    flake8 --verbose --max-line-length=80 --ignore="E203,W503"
-
-### isort
-
-#### Install isort (in case of separate usage)
-
-    pip install isort
-
-#### Check unsorted imports
-
-    isort . --diff --quiet --check-only
-
-#### Automatically sort imports (done in pre-commit)
-
-    isort .
-
-### mypy
-
-#### Install mypy (in case of separate usage)
-
-    pip install mypy
-
-#### Check type errors (done in pre-commit)
-
-    mypy .
-
-### Run markdownlint (done in pre-commit)
-
-    pre-commit run -a markdownlint-fix
-
-### Run hadolint (done in pre-commit)
-
-    pre-commit run -a hadolint-docker
+        pre-commit run -a hadolint-docker
+    ```
