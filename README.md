@@ -1,28 +1,47 @@
 # Moscow time app
 
-## Overview
+## Description
 
-Web application that displays current time in Moscow.
+Web application that displays current time in Moscow
+and tracks page visits.
+
+Endpoints:
+
+1. ``/`` - displays current time in Moscow
+2. ``/visits`` - displays visits to the page
+3. ``/health`` - displays health status of the application
 
 ## Usage
 
-### Install dependencies
+1. Install dependencies
 
-#### Only dependencies (for production run)
+    For production run
 
-    poetry install --no-dev
+    ``$ poetry install --no-dev``
 
-#### Both dev tools and dependencies
+    OR both dev tools and dependencies
 
-    poetry install
+    ``$ poetry install``
 
-### Run
+2. Run the application
 
-    python3 main.py
+    ``$ PYTHONPATH=src python3 src/app/main.py``
 
-## Development
+3. Access <http://localhost:8080>
 
-### Install pre-commit, linters, and formatters
+## Tests
+
+1. Install dependencies
+
+    ``$ poetry install``
+
+2. Run tests
+
+    ``$ PYTHONPATH=src pytest tests``
+
+## Quality Checks
+
+1. Install pre-commit, linters, and formatters
 
     ```bash
         poetry add -D black flake8 isort mypy pre-commit
@@ -30,7 +49,7 @@ Web application that displays current time in Moscow.
         pre-commit install
     ```
 
-### Run linters and formatters
+2. Run linters and formatters
 
     ```bash
         black .
