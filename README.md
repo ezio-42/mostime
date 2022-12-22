@@ -1,85 +1,66 @@
 # Moscow time app
 
-## Overview
+## Description
 
-Web application that displays current time in Moscow.
+Web application that displays current time in Moscow
+and tracks page visits.
+
+Endpoints:
+
+1. ``/`` - displays current time in Moscow
+2. ``/visits`` - displays visits to the page
+3. ``/health`` - displays health status of the application
 
 ## Usage
 
-### Install dependencies
+1. Install dependencies
 
-#### Only dependencies (for production run)
+    For production run
 
-    poetry install --no-dev
+    ``$ poetry install --no-dev``
 
-#### Both dev tools and dependencies
+    OR both dev tools and dependencies
 
-    poetry install
+    ``$ poetry install``
 
-### Run
+2. Run the application
 
-    python3 main.py
+    ``$ PYTHONPATH=src python3 src/app/main.py``
 
-## Development
+3. Access <http://localhost:8080>
 
-### Install pre-commit hooks (run this after dev tools installation)
+## Tests
 
-    pre-commit install
+1. Install dependencies
 
-### black
+    ``$ poetry install``
 
-#### Install black (in case of separate usage)
+2. Run tests
 
-    pip install black
+    ``$ PYTHONPATH=src pytest tests``
 
-#### Check formatting
+## Quality Checks
 
-    black --check . --verbose --diff
+1. Install pre-commit, linters, and formatters
 
-#### Automatically fix formatting (done in pre-commit)
+    ```bash
+        poetry add -D black flake8 isort mypy pre-commit
 
-    black .
+        pre-commit install
+    ```
 
-### flake8
+2. Run linters and formatters
 
-#### Install flake8 (in case of separate usage)
+    ```bash
+        black .
 
-    pip install flake8
+        flake8 --verbose --max-line-length=80 --ignore="E203,W503"
 
-#### Check formatting and errors (done in pre-commit)
+        isort .
 
-Ignore some rules due to conflict with black.
+        mypy .
 
-    flake8 --verbose --max-line-length=80 --ignore="E203,W503"
+        pre-commit run -a markdownlint-fix
 
-### isort
-
-#### Install isort (in case of separate usage)
-
-    pip install isort
-
-#### Check unsorted imports
-
-    isort . --diff --quiet --check-only
-
-#### Automatically sort imports (done in pre-commit)
-
-    isort .
-
-### mypy
-
-#### Install mypy (in case of separate usage)
-
-    pip install mypy
-
-#### Check type errors (done in pre-commit)
-
-    mypy .
-
-### Run markdownlint (done in pre-commit)
-
-    pre-commit run -a markdownlint-fix
-
-### Run hadolint (done in pre-commit)
-
-    pre-commit run -a hadolint-docker
+        pre-commit run -a hadolint-docker
+    ```
