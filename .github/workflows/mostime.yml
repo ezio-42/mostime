@@ -31,17 +31,14 @@ jobs:
       - name: Run tests using pytest
         run: poetry run python3 -m pytest tests
 
-      - name: Generate coverage report
+      - name: Run tests with coverage and upload coverage to Codecov
         run: poetry run python3 -m pytest --cov=./coverage/reports/ --cov-report=xml
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
-          directory: ./coverage/reports/
-          env_vars: OS,PYTHON
           fail_ci_if_error: true
           files: ./coverage1.xml,./coverage2.xml
           flags: unittests
           name: codecov-umbrella
-          path_to_write_report: ./coverage/codecov_report.txt
           verbose: true
