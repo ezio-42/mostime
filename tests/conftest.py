@@ -10,6 +10,7 @@ pytest_plugins = "aiohttp.pytest_plugin"
 async def api_client(aiohttp_client):
     """Create test client for aiohttp application."""
     config = default_config
+    config.visits_file = "tests/visits.txt"
     app = make_app(config)
     client = await aiohttp_client(app)
     try:
