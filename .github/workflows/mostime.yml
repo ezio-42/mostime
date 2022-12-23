@@ -29,10 +29,7 @@ jobs:
         run: poetry install --no-interaction
 
       - name: Run tests using pytest
-        run: |
-          poetry run python3 -m pytest --cov=./ --cov-report=xml
-          ls -lah
-          pwd
+        run: poetry run python3 -m pytest --cov=./ --cov-report=xml
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
@@ -41,7 +38,7 @@ jobs:
           directory: ./coverage/reports/
           env_vars: OS,PYTHON
           fail_ci_if_error: true
-          files: ./coverage1.xml,./coverage2.xml
+          files: ./coverage.xml
           flags: unittests
           name: codecov-umbrella
           path_to_write_report: ./coverage/codecov_report.txt
