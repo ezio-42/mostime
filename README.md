@@ -19,18 +19,6 @@ Endpoints:
 
 ## Usage
 
-### Run app using Makefile
-
-1. Build docker image
-
-    ``make build-docker``
-
-2. Run docker image
-
-    ``make docker-run``
-
-3. Access <http://localhost:8080>
-
 ### Manual running
 
 1. Install dependencies
@@ -48,6 +36,36 @@ Endpoints:
     ``$ PYTHONPATH=src:tests python3 src/app/main.py``
 
 3. Access <http://localhost:8080>
+
+### Run app using Docker
+
+1. Build docker image
+
+    ``docker build -t mostime -f Dockerfile .``
+
+2. Run docker image
+
+    ``docker run -p 8080:8080 mostime``
+
+3. Access <http://localhost:8080>
+
+### Run app using Makefile
+
+- #### With Docker
+
+    1. Build docker image
+
+        ``make build-docker``
+
+    2. Run docker image
+
+        ``make docker-run``
+
+- #### Without Docker
+
+    - ``make run``
+
+- Access <http://localhost:8080>
 
 ## Tests
 
