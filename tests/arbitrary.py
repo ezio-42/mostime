@@ -15,7 +15,10 @@ def not_in(
     n: int = 100,
 ) -> list:
     """Generate n values that are not in existing_values."""
-    s = arbitrary_fn()
-    while s in existing_values:
+    res = []
+    for _ in range(n):
         s = arbitrary_fn()
-    return [s for _ in range(n)]
+        while s in existing_values:
+            s = arbitrary_fn()
+        res.append(s)
+    return res
