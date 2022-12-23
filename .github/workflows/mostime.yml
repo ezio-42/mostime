@@ -5,7 +5,7 @@ on:
     paths:
       - "src"
       - "tests"
-      - ".github/workflows/mostime.yaml"
+      - ".github/workflows/mostime.yml"
 
 jobs:
   test:
@@ -15,18 +15,14 @@ jobs:
       PYTHONPATH: src
     steps:
       - uses: actions/checkout@v3
-
       - name: Install poetry
         run: pipx install poetry
-
       - name: Install Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.10"
           cache: poetry
-
       - name: Install dependencies
         run: poetry install --no-interaction
-
       - name: Run tests using pytest
         run: poetry run python3 -m pytest tests
