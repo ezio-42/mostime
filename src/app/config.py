@@ -4,6 +4,8 @@ from dataclasses import dataclass
 
 @dataclass
 class Config:
+    """Configuration for the app."""
+
     port: int
     app_name: str
     visits_file: str
