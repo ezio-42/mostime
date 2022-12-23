@@ -1,4 +1,5 @@
 import json
+import os
 from dataclasses import dataclass
 
 
@@ -17,8 +18,12 @@ _default_config_data = {
     "visits_file": "/app/data/visits.txt",
 }
 
+_default_config_file = "/app/config.json"
+
+config_file = os.environ.get("CONFIG_FILE", _default_config_file)
+
 try:
-    with open("/app/config.json", "r") as f:
+    with open(config_file, "r") as f:
         data = json.load(f)
         _default_config_data.update(data)
 except FileNotFoundError:

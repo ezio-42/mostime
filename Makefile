@@ -1,5 +1,5 @@
 run:
-	PYTHONPATH=src:tests poetry run python3 src/app/main.py
+	PYTHONPATH=src:tests CONFIG_FILE=config/local.json poetry run python3 src/app/main.py
 
 test:
 	PYTHONPATH=src:tests poetry run python3 -m pytest -rvs tests
