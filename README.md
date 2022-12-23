@@ -51,21 +51,23 @@ Endpoints:
 
 ### Run app using Makefile
 
-- #### With Docker
+#### With Docker
 
-    1. Build docker image
+1. Build docker image
 
-        ``make build-docker``
+    ``$ make build-docker``
 
-    2. Run docker image
+2. Run docker image
 
-        ``make docker-run``
+    ``$ make docker-run``
 
-- #### Without Docker
+#### Without Docker
 
-    - ``make run``
+1. Install dependencies
 
-- Access <http://localhost:8080>
+2. Run
+
+    ``$ make run``
 
 ## Tests
 
