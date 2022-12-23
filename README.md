@@ -1,5 +1,10 @@
 # Moscow time app
 
+[![CI](https://github.com/ezio-42/mostime/actions/workflows/mostime.yml/badge.svg)](https://img.shields.io/github/actions/workflow/status/ezio-42/mostime/mostime.yml)
+[![Python version](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-3100/)
+![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/ezio-42/mostime)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
 ## Description
 
 Web application that displays current time in Moscow
@@ -64,3 +69,16 @@ Endpoints:
 
         pre-commit run -a hadolint-docker
     ```
+
+## License
+
+The source code is licensed under the
+[GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) license.
+
+See [LICENSE](LICENSE) for more information.
+
+## Contribution
+
+Fork repository, make changes, send us a pull request.
+We will review your changes and apply them to the master branch shortly,
+provided they don't violate our quality standards.
