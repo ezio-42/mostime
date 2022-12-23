@@ -32,7 +32,7 @@ jobs:
         run: poetry run python3 -m pytest tests
 
       - name: Generate coverage report
-        run: poetry run python3 -m pytest --cov=./ --cov-report=xml
+        run: poetry run python3 -m pytest --cov=./coverage/reports/ --cov-report=xml
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
