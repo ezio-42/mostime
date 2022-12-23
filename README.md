@@ -30,7 +30,7 @@ Endpoints:
 
 2. Run the application
 
-    ``$ PYTHONPATH=src python3 src/app/main.py``
+    ``$ PYTHONPATH=src:tests python3 src/app/main.py``
 
 3. Access <http://localhost:8080>
 
@@ -42,7 +42,7 @@ Endpoints:
 
 2. Run tests
 
-    ``$ PYTHONPATH=src pytest tests``
+    ``$ PYTHONPATH=src:tests pytest tests``
 
 ## Quality Checks
 
