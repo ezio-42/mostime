@@ -19,6 +19,20 @@ Endpoints:
 
 ## Usage
 
+### Run app using Makefile
+
+1. Build docker image
+
+    ``make build-docker``
+
+2. Run docker image
+
+    ``make docker-run``
+
+3. Access <http://localhost:8080>
+
+### Manual running
+
 1. Install dependencies
 
     For production run
