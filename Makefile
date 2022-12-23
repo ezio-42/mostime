@@ -17,3 +17,9 @@ clean:
 	rm -rf ./**/__pycache__
 	rm -rf ./**/.mypy_cache
 	rm -rf ./**/.pytest_cache
+
+build-docker:
+	docker build -t mostime -f Dockerfile .
+
+run-in-docker:
+	docker run -p 8080:8080 mostime
