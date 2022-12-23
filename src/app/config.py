@@ -14,7 +14,7 @@ class Config:
 _default_config_data = {
     "port": 8080,
     "app_name": "app_python",
-    "visits_file": "data/visits.txt",
+    "visits_file": "/app/data/visits.txt",
 }
 
 try:
