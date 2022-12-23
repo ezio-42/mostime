@@ -1,11 +1,9 @@
-env:
-	export PYTHONPATH=src:tests
-
 run:
-	poetry run python3 src/app/main.py
+	PYTHONPATH=src:tests poetry run python3 src/app/main.py
 
 test:
-	poetry run python3 -m pytest -rvs tests
+	PYTHONPATH=src:tests poetry run python3 -m pytest -rvs tests
+	rm tests/visits.txt
 
 pre-commit:
 	pre-commit run -a
