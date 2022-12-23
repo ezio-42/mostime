@@ -1,6 +1,7 @@
 # Moscow time app
 
 [![CI](https://github.com/ezio-42/mostime/actions/workflows/mostime.yml/badge.svg)](https://img.shields.io/github/actions/workflow/status/ezio-42/mostime/mostime.yml)
+[![codecov](https://codecov.io/gh/ezio-42/mostime/branch/main/graph/badge.svg)](https://codecov.io/gh/ezio-42/mostime)
 [![Python version](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/ezio-42/mostime)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
